@@ -29,7 +29,7 @@ void insert(int n)
 
                   }
            
-      else  {  if(rear!=n)
+      else  { 
                  rear=(rear+1)%n;
                }
               
