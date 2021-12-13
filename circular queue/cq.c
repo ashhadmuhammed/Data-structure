@@ -39,7 +39,12 @@ void insert(int n)
 }
 
 void display(int n)
-{       int k=n;
+{  int k=n;  
+ if(front==-1)
+{
+    printf("\nEmpty circular queue");
+     return ;
+}
         if(front<rear){
         printf("Circular Queue is:");
         for(i=front;i<=rear;i++)
@@ -70,7 +75,7 @@ void delete()
 { int data;
  if( front==-1)
    { 
-     printf("**************Circular Queue Underflow****************");
+     printf("\n\n**************Circular Queue Underflow****************");
      front=-1;
      rear=-1;
      
@@ -78,7 +83,8 @@ void delete()
      
    }
   else{
-          printf("\nDeleting Last element");
+      
+          printf("\n\nDeleting Last element");
           data=cq[front];
           if (front==rear)
           {
@@ -90,9 +96,10 @@ void delete()
           }
           else{
           front=front+1;
-          printf("Deleted element is :%d",data);
+          
 
           }
+printf("Deleted element is :%d",data);
         }
  return ;
 }
@@ -113,7 +120,7 @@ void main()
 
  while(choice!=4)
 {   
-    printf("MENU\n");
+    printf("\n \nMENU\n");
 
             printf("      1.Enqueue");
 
